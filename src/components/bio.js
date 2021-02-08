@@ -6,7 +6,7 @@
  */
 
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
 const Bio = () => {
@@ -57,9 +57,14 @@ const Bio = () => {
           {` `}
           <a href={`https://twitter.com/${social?.twitter || ``}`}>
             You should follow them on Twitter
-          </a>
+          </a>.
+          {` `}
+          <span>
+            You can contact me on <Link to="contact-me">this page</Link>.
+          </span>
         </p>
       )}
+
     </div>
   )
 }
